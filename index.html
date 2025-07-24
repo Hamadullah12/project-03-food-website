@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans&family=Cardo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>CafeDine Navbar</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <img src="./assets/logo.png" alt="CafeDine Logo" class="logo" />
+      </div>
+
+      <!-- Regular Nav Links (Desktop) -->
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">RECIPES</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">RESERVATION</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+
+      <!-- Hamburger Icon (Mobile) -->
+      <div class="hamburger" onclick="showSidebar()">&#9776;</div>
+    </nav>
+
+    <!-- Sidebar for Mobile -->
+    <div class="sidebar" id="sidebar">
+      <div class="close-btn" onclick="hideSidebar()">✕</div>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">RECIPES</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">RESERVATION</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
