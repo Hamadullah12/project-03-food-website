@@ -220,14 +220,15 @@ nav.navbar {
 /* about section */
 
 .about {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 60px 20px;
+    background-color: white;
 }
 
 .about-content {
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .about-tagline {
@@ -239,8 +240,61 @@ nav.navbar {
     margin-bottom: 25px;
 }
 
+.about-title {
+    font-family: "Cardo", serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+    line-height: 1.3;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.about-dish {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+.about-dishes-box {
+    text-align: center;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-dishes-box:hover {
+    transform: translateY(-5px);
+}
+
+.about-dishes-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about-dishes-content {
+    padding: 25px 20px;
+}
+
+.about-dishes-content h3 {
+    font-family: "Cardo", serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-dishes-content p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
 
 /* * Mobile Responsive - 498px and below */
 @media (max-width: 498px) {
