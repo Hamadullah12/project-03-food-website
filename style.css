@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: white;
 }
 
 nav.navbar {
@@ -217,6 +216,30 @@ nav.navbar {
     padding-right: 10px;
     font-family: sans-serif;
 }
+
+/* about section */
+
+.about {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-tagline {
+    font-family: "cookie";
+    font-size: 36px;
+    font-weight: 400;
+    color: red;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+
 
 
 /* * Mobile Responsive - 498px and below */
