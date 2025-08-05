@@ -253,7 +253,7 @@ nav.navbar {
 
 .about-dish {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
@@ -263,7 +263,6 @@ nav.navbar {
     text-align: center;
     background: white;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -274,11 +273,11 @@ nav.navbar {
 .about-dishes-box img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .about-dishes-content {
-    padding: 25px 20px;
+    padding: 15px 15px;
 }
 
 .about-dishes-content h3 {
@@ -293,7 +292,551 @@ nav.navbar {
     font-family: Arial, sans-serif;
     font-size: 14px;
     color: #666;
+    max-width: 250px;
+    margin: 0 auto;
     line-height: 1.6;
+}
+
+
+/* Best Dishes Hero */
+.best-dishes {
+    height: 60vh;
+    background: url('./assets/fixed-bg.jpg') center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Optional dark overlay for readability */
+.best-dishes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.best-dishes-content {
+    position: relative;
+    z-index: 1;
+}
+
+.best-dishes h4 {
+    font-family: 'Cookie', cursive;
+    font-size: 25px;
+    font-weight: 300;
+    color: #e9eee6;
+    padding-top: 30px;
+    margin: 0;
+}
+
+.best-dishes h1 {
+    font-family: 'Cardo', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin: 10px 0;
+    padding-top: 20px;
+}
+
+.best-dishes button {
+    background: rgb(243, 237, 237);
+    color: black;
+    border: none;
+    padding: 14px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* menu section */
+.menu-section {
+    text-align: center;
+    font-family: 'cardo', sans-serif;
+    padding: 50px 20px;
+}
+
+.subtitle {
+    color: red;
+    font-family: "Cookie";
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.menu-section h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.menu-filter {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.menu-filter li {
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    font-weight: 800;
+    color: #7c7676;
+}
+
+.menu-filter li.active {
+    color: red;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+}
+
+.menu-item img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.menu-info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.menu-info .price {
+    color: red;
+}
+
+.menu-info p {
+    font-size: 16px;
+    color: #777;
+    font-family: "Open Sans", sans-serif;
+}
+
+.menu-btn {
+    margin-top: 30px;
+}
+
+.menu-btn button {
+    background: black;
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+/* gallery seciton */
+.food-gallery {
+    display: flex;
+}
+
+.food-gallery img {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* footer section */
+
+
+.footer {
+    background-color: #1a1a1a;
+    padding: 60px 0 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    border-color: #666;
+    color: #fff;
+}
+
+.social-links a i {
+    font-size: 16px;
+}
+
+/* Contact info */
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+.contact-info li i {
+    margin-right: 10px;
+    color: #999;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* Opening hours */
+.opening-hours .hours-list {
+    color: #999;
+    font-size: 14px;
+}
+
+.hours-list div {
+    margin-bottom: 15px;
+}
+
+.hours-list .day {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.hours-list .time {
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* Newsletter */
+.newsletter {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+.newsletter h3 {
+    color: #999;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 20px;
+    background-color: transparent;
+    border: 1px solid #333;
+    border-right: none;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-form input::placeholder {
+    color: #666;
+}
+
+.newsletter-form button {
+    padding: 12px 20px;
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.newsletter-form button i {
+    font-size: 16px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.footer-nav a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+
+
+
+
+/* ===========================================
+   RESPONSIVE BREAKPOINTS
+   =========================================== */
+
+/* Large Desktop - 1200px and above */
+@media (min-width: 1200px) {
+    .hero-section {
+        height: 140vh;
+    }
+
+    .features-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 960px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop - 992px to 1199px */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .nav-links {
+        gap: 30px;
+        padding: 40px 0px 0 120px;
+    }
+
+    .hero-heading {
+        font-size: 45px;
+    }
+
+    .features-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet Landscape - 768px to 991px */
+@media (max-width: 991px) and (min-width: 768px) {
+    .nav-links {
+        gap: 20px;
+        padding: 40px 0px 0 80px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero-section {
+        padding: 0 5%;
+    }
+
+    .hero-heading {
+        font-size: 40px;
+    }
+
+    .features-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .about-title {
+        font-size: 36px;
+    }
+
+    .best-dishes h1 {
+        font-size: 38px;
+    }
+
+    .menu-section h2 {
+        font-size: 36px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-filter {
+        gap: 15px;
+    }
+}
+
+/* Tablet Portrait - 576px to 767px */
+@media (max-width: 767px) and (min-width: 576px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        padding: 20px 0 0 20px;
+    }
+
+    .hero-section {
+        padding: 0 4%;
+        height: 100vh;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: 32px;
+    }
+
+    .hero-heading {
+        font-size: 36px;
+    }
+
+    .features {
+        margin-top: -100px;
+    }
+
+    .features-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-box {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-dish {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .best-dishes {
+        height: 50vh;
+    }
+
+    .best-dishes h1 {
+        font-size: 32px;
+    }
+
+    .menu-section h2 {
+        font-size: 32px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-item img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .food-gallery img {
+        width: 60%;
+        min-width: 250px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-form input {
+        border-right: 1px solid #333;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* * Mobile Responsive - 498px and below */
@@ -416,5 +959,20 @@ nav.navbar {
         line-height: 1.5;
         font-weight: 500;
         color: #666;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* gallery */
+    .food-gallery {
+        overflow-x: auto;
+        /* enable scroll on mobile */
+    }
+
+    .food-gallery img {
+        width: 50%;
+        flex-shrink: 0;
     }
 }
